@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({
-    username: '',
+    email: '',
     password: ''
   });
   const [error, setError] = useState('');
@@ -394,17 +394,17 @@ export default function LoginPage() {
 
             <div className="form-group">
               <label htmlFor="username" className="form-label">
-                Username
+                Email
               </label>
               <input
-                type="text"
-                id="username"
-                name="username"
-                value={formData.username}
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
                 onChange={handleChange}
                 onKeyPress={handleKeyPress}
                 className="form-input"
-                placeholder="Masukkan username"
+                placeholder="Masukkan email"
                 disabled={loading}
               />
             </div>
